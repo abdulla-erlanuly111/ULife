@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="data:,">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ulife Login</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="login-page">
+  <main class="login-shell">
+    <section class="login-panel">
+      <div class="login-brand">
+        <div class="login-logo"><i data-lucide="graduation-cap"></i></div>
+        <div>
+          <h1>Ulife</h1>
+          <p>Student life dashboard</p>
+        </div>
+      </div>
+
+      <form id="loginForm" class="login-form">
+        <div class="auth-tabs">
+          <button type="button" class="active" data-auth-tab="login">Sign In</button>
+          <button type="button" data-auth-tab="register">Register</button>
+        </div>
+
+        <h2>Welcome back</h2>
+        <p class="subtitle">Sign in with your university account</p>
+
+        <label>Email
+          <input id="loginEmail" type="email" placeholder="student@sdu.edu.kz" required>
+        </label>
+
+        <label>Password
+          <input id="loginPassword" type="password" placeholder="Enter password" required>
+        </label>
+
+        <div class="login-options">
+          <label class="remember-row"><input id="rememberEmail" type="checkbox"> Remember me</label>
+          <button id="forgotPasswordLink" class="text-link" type="button">Forgot password?</button>
+        </div>
+
+        <div id="forgotPasswordBox" class="forgot-password-box hidden">
+          <label>University Email
+            <input id="forgotPasswordEmail" type="email" placeholder="student@sdu.edu.kz">
+          </label>
+          <button id="sendResetLink" class="secondary" type="button">Send Reset Instructions</button>
+          <p id="forgotPasswordMessage" class="subtitle"></p>
+        </div>
+
+        <button type="submit">Sign In</button>
+      </form>
+
+      <form id="registerForm" class="login-form hidden">
+        <div class="auth-tabs">
+          <button type="button" data-auth-tab="login">Sign In</button>
+          <button type="button" class="active" data-auth-tab="register">Register</button>
+        </div>
+
+        <h2>Create account</h2>
+        <p class="subtitle">Register with your student information</p>
+
+        <label>Full Name
+          <input id="registerName" placeholder="Alex Johnson" required>
+        </label>
+
+        <label>University Email
+          <input id="registerEmail" type="email" placeholder="student@sdu.edu.kz" required>
+        </label>
+
+        <label>Student ID
+          <input id="registerStudentId" placeholder="202600123" inputmode="numeric" pattern="[0-9]{9}" maxlength="9" required>
+        </label>
+
+        <label>University
+          <input id="registerUniversity" value="SDU University" required>
+        </label>
+
+        <label>Password
+          <input id="registerPassword" type="password" placeholder="Create password" minlength="8" required>
+        </label>
+
+        <button type="submit">Create Account</button>
+      </form>
+    </section>
+
+    <section class="login-preview">
+      <div class="login-preview-card">
+        <i data-lucide="calendar-check"></i>
+        <span>Today</span>
+        <b>Plan classes and deadlines</b>
+      </div>
+      <div class="login-preview-card">
+        <i data-lucide="wallet"></i>
+        <span>Budget</span>
+        <b>Track income and expenses</b>
+      </div>
+      <div class="login-preview-card">
+        <i data-lucide="heart-pulse"></i>
+        <span>Wellbeing</span>
+        <b>Follow your mood trends</b>
+      </div>
+    </section>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>

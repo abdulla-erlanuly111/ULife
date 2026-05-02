@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ulife</title>
+  <link rel="stylesheet" href="styles.css?v=20260502-profile-photo" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <h1 class="logo">Ulife</h1>
+    <nav><a class="nav-btn " href="dashboard.html"><i data-lucide="layout-dashboard"></i>Dashboard</a>
+<a class="nav-btn " href="calendar.html"><i data-lucide="calendar"></i>Calendar</a>
+<a class="nav-btn " href="academics.html"><i data-lucide="graduation-cap"></i>Academics</a>
+<a class="nav-btn " href="finance.html"><i data-lucide="wallet"></i>Finance</a>
+<a class="nav-btn " href="wellbeing.html"><i data-lucide="heart"></i>Wellbeing</a>
+<a class="nav-btn " href="notifications.html"><i data-lucide="bell"></i>Notifications</a>
+<a class="nav-btn active" href="settings.html"><i data-lucide="settings"></i>Settings</a></nav>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div></div>
+      <div class="top-icons">
+        <a class="bell" href="notifications.html"><i data-lucide="bell"></i><b></b></a>
+        <a class="avatar" href="settings.html"><i data-lucide="user"></i></a>
+      </div>
+    </header>
+    <section class="page">
+<h2>Settings</h2>
+<div class="settings-layout">
+  <div class="settings-menu"><a class="active-setting" href="#profile">Profile</a></div>
+  <div>
+    <div id="profile" class="card form-card">
+      <h3>Profile Information</h3>
+      <div class="profile-row"><span id="profileAvatar" class="avatar big-avatar"><i data-lucide="user"></i></span><input id="profilePhotoInput" class="hidden" type="file" accept="image/*"><button id="changePhotoBtn" type="button">Change Photo</button></div>
+      <label>First Name<input id="profileFirstName" autocomplete="given-name"></label>
+      <label>Last Name<input id="profileLastName" autocomplete="family-name"></label>
+      <label>Email<input id="profileEmail" type="email" readonly></label>
+      <label>University<input id="profileUniversity" autocomplete="organization"></label>
+      <label>Student ID<input id="profileStudentId" autocomplete="off"></label>
+      <label>Role<input id="profileRole" readonly></label>
+      <div class="wide"><button id="cancelProfile" class="secondary" type="button">Cancel</button> <button id="saveProfile">Save Changes</button> <button id="logoutBtn" class="secondary">Log Out</button></div>
+    </div>
+  </div>
+</div>
+</section>
+  </main>
+  <script src="scripts.js?v=20260502-profile-photo"></script>
+</body>
+</html>

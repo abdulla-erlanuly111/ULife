@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ulife</title>
+  <link rel="stylesheet" href="styles.css?v=20260502-calendar-size" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <h1 class="logo">Ulife</h1>
+    <nav><a class="nav-btn " href="dashboard.html"><i data-lucide="layout-dashboard"></i>Dashboard</a>
+<a class="nav-btn active" href="calendar.html"><i data-lucide="calendar"></i>Calendar</a>
+<a class="nav-btn " href="academics.html"><i data-lucide="graduation-cap"></i>Academics</a>
+<a class="nav-btn " href="finance.html"><i data-lucide="wallet"></i>Finance</a>
+<a class="nav-btn " href="wellbeing.html"><i data-lucide="heart"></i>Wellbeing</a>
+<a class="nav-btn " href="notifications.html"><i data-lucide="bell"></i>Notifications</a>
+<a class="nav-btn " href="settings.html"><i data-lucide="settings"></i>Settings</a></nav>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div></div>
+      <div class="top-icons">
+        <a class="bell" href="notifications.html"><i data-lucide="bell"></i><b></b></a>
+        <a class="avatar" href="settings.html"><i data-lucide="user"></i></a>
+      </div>
+    </header>
+    <section class="page">
+<div class="page-head"><div><h2>Calendar</h2><p id="calendarRange" class="subtitle"></p></div><div><button id="addEventBtn">+ Add Event</button></div></div>
+<div class="calendar-layout">
+  <div class="filters">
+    <div class="mini-calendar">
+      <div class="mini-calendar-head">
+        <button type="button" id="prevMonth" class="mini-nav">‹</button>
+        <b id="miniMonthLabel"></b>
+        <button type="button" id="nextMonth" class="mini-nav">›</button>
+      </div>
+      <div class="mini-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div id="miniCalendarDays" class="mini-days"></div>
+      <button type="button" id="todayBtn" class="secondary mini-today">Today</button>
+    </div>
+    <h3>Filters</h3>
+    <label class="filter-row"><input type="checkbox" data-calendar-filter="course" checked><span class="filter-dot course-dot"></span>Courses</label>
+    <label class="filter-row"><input type="checkbox" data-calendar-filter="personal" checked><span class="filter-dot personal-dot"></span>Personal</label>
+    <label class="filter-row"><input type="checkbox" data-calendar-filter="deadline" checked><span class="filter-dot deadline-dot"></span>Deadlines</label>
+  </div>
+  <div class="calendar-scroll"><div id="calendarGrid" class="calendar-grid"></div></div>
+</div>
+<div id="eventModal" class="modal">
+  <div class="modal-box">
+    <h3>Add Event</h3>
+    <form id="eventForm">
+      <input id="eventTitle" placeholder="Event title" required>
+      <input id="eventDate" type="date" required>
+      <input id="eventTime" type="time" required>
+      <select id="eventType"><option>Course</option><option>Personal</option><option>Deadline</option></select>
+      <button type="submit">Save Event</button>
+      <button type="button" class="secondary close-modal">Cancel</button>
+    </form>
+  </div>
+</div>
+</section>
+  </main>
+  <script src="scripts.js?v=20260502-calendar-size"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ulife</title>
+  <link rel="stylesheet" href="styles.css?v=20260502-finance-db" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <h1 class="logo">Ulife</h1>
+    <nav><a class="nav-btn " href="dashboard.html"><i data-lucide="layout-dashboard"></i>Dashboard</a>
+<a class="nav-btn " href="calendar.html"><i data-lucide="calendar"></i>Calendar</a>
+<a class="nav-btn " href="academics.html"><i data-lucide="graduation-cap"></i>Academics</a>
+<a class="nav-btn active" href="finance.html"><i data-lucide="wallet"></i>Finance</a>
+<a class="nav-btn " href="wellbeing.html"><i data-lucide="heart"></i>Wellbeing</a>
+<a class="nav-btn " href="notifications.html"><i data-lucide="bell"></i>Notifications</a>
+<a class="nav-btn " href="settings.html"><i data-lucide="settings"></i>Settings</a></nav>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div></div>
+      <div class="top-icons">
+        <a class="bell" href="notifications.html"><i data-lucide="bell"></i><b></b></a>
+        <a class="avatar" href="settings.html"><i data-lucide="user"></i></a>
+      </div>
+    </header>
+    <section class="page">
+<div class="page-head"><div><h2>Finance</h2><p class="subtitle">Track your spending and budget</p></div><button id="addTransaction">+ Add Transaction</button></div>
+<div class="grid four">
+  <div class="card"><p>Monthly Budget</p><div id="monthlyBudgetValue" class="big">0 ₸</div><input id="monthlyBudgetInput" type="number" min="1" step="100"><button id="saveBudgetBtn" class="secondary">Save Budget</button><p>April 2026</p></div>
+  <div class="card"><p>Income</p><div id="totalIncomeValue" class="big">0 ₸</div><p class="green-text">Money received</p></div>
+  <div class="card"><p>Total Spent</p><div id="totalSpentValue" class="big">0 ₸</div><p id="spentPercentValue" class="red-text">0% of budget</p></div>
+  <div class="card"><p>Remaining</p><div id="remainingValue" class="big">0 ₸</div><p id="remainingPercentValue" class="green-text">No budget set</p></div>
+</div>
+<div class="grid two">
+  <div class="card"><h3>Spending by Category</h3><div id="spendingPie" class="pie"></div></div>
+  <div class="card"><h3>Category Breakdown</h3><div id="categories"></div></div>
+</div>
+<div class="card"><h3>Recent Transactions</h3><div id="transactionList"><p class="subtitle">No transactions yet</p></div></div>
+
+<div id="transactionModal" class="modal">
+  <div class="modal-box">
+    <h3>Add Transaction</h3>
+    <form id="transactionForm" class="transaction-form">
+      <div class="transaction-type">
+        <button type="button" class="selected" data-type="expense">Expense</button>
+        <button type="button" data-type="income">Income</button>
+      </div>
+
+      <label>Title
+        <input id="transactionTitle" placeholder="Example: Grocery Shopping" required>
+      </label>
+
+      <label id="transactionCategoryField">Category
+        <select id="transactionCategory" required>
+          <option>Food & Dining</option>
+          <option>Transportation</option>
+          <option>Entertainment</option>
+          <option>Books & Supplies</option>
+          <option>Utilities</option>
+        </select>
+      </label>
+
+      <label>Amount
+        <input id="transactionAmount" type="number" min="1" step="0.01" placeholder="45.50" required>
+      </label>
+
+      <label>Date
+        <input id="transactionDate" type="date" required>
+      </label>
+
+      <div class="transaction-actions">
+        <button type="button" class="secondary close-transaction-modal">Cancel</button>
+        <button type="submit">Save Transaction</button>
+      </div>
+    </form>
+  </div>
+</div>
+</section>
+  </main>
+  <script src="scripts.js?v=20260502-finance-db"></script>
+</body>
+</html>

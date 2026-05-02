@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Computer Science 301</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <main class="page" style="margin-left:0;">
+    <a class="back-link" href="academics.html">← Back to Courses</a>
+
+    <div class="course-hero">
+      <p>CS301</p>
+      <h2>Computer Science 301</h2>
+      <p>Dr. Sarah Johnson</p>
+    </div>
+
+    <div class="course-tabs">
+      <div class="course-tab-head">
+        <button class="active-tab">Assignments</button>
+      </div>
+
+      <div class="assignment-list">
+        <div class="assignment-item" data-alert="This deadline is visible in Calendar: May 3, 2026">
+          <div class="assignment-left">
+            <span class="assignment-icon upcoming-icon"><i data-lucide="clock-3"></i></span>
+            <div class="assignment-meta">
+              <b>Assignment #3: Graph Algorithms</b>
+              <span>Due: May 3, 2026</span>
+            </div>
+          </div>
+          <span class="status upcoming">Upcoming</span>
+        </div>
+
+        <div class="assignment-item" data-alert="Assignment #2 opened">
+          <div class="assignment-left">
+            <span class="assignment-icon submitted-icon"><i data-lucide="file-check-2"></i></span>
+            <div class="assignment-meta">
+              <b>Assignment #2: Sorting Analysis</b>
+              <span>Due: Apr 26, 2026</span>
+              <span><b>Score:</b> 95/100</span>
+            </div>
+          </div>
+          <span class="status submitted">Submitted</span>
+        </div>
+
+        <div class="assignment-item" data-alert="Assignment #1 opened">
+          <div class="assignment-left">
+            <span class="assignment-icon graded-icon"><i data-lucide="badge-check"></i></span>
+            <div class="assignment-meta">
+              <b>Assignment #1: Linked Lists</b>
+              <span>Due: Apr 12, 2026</span>
+              <span><b>Score:</b> 88/100</span>
+            </div>
+          </div>
+          <span class="status graded">Graded</span>
+        </div>
+
+        <div class="assignment-item" data-alert="Midterm Project opened">
+          <div class="assignment-left">
+            <span class="assignment-icon graded-icon"><i data-lucide="badge-check"></i></span>
+            <div class="assignment-meta">
+              <b>Midterm Project</b>
+              <span>Due: Mar 15, 2026</span>
+              <span><b>Score:</b> 185/200</span>
+            </div>
+          </div>
+          <span class="status graded">Graded</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>

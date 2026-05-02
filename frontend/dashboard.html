@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ulife</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <h1 class="logo">Ulife</h1>
+    <nav><a class="nav-btn active" href="dashboard.html"><i data-lucide="layout-dashboard"></i>Dashboard</a>
+<a class="nav-btn " href="calendar.html"><i data-lucide="calendar"></i>Calendar</a>
+<a class="nav-btn " href="academics.html"><i data-lucide="graduation-cap"></i>Academics</a>
+<a class="nav-btn " href="finance.html"><i data-lucide="wallet"></i>Finance</a>
+<a class="nav-btn " href="wellbeing.html"><i data-lucide="heart"></i>Wellbeing</a>
+<a class="nav-btn " href="notifications.html"><i data-lucide="bell"></i>Notifications</a>
+<a class="nav-btn " href="settings.html"><i data-lucide="settings"></i>Settings</a></nav>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div></div>
+      <div class="top-icons">
+        <a class="bell" href="notifications.html"><i data-lucide="bell"></i><b></b></a>
+        <a class="avatar" href="settings.html"><i data-lucide="user"></i></a>
+      </div>
+    </header>
+    <section class="page">
+<h2>Welcome back! 👋</h2>
+<p class="subtitle">Here's what's happening with your academic life today</p>
+<div id="userEmail"></div>
+<div class="grid two">
+  <div class="card">
+    <div class="card-title">Today's Schedule <i data-lucide="calendar-days"></i></div>
+    <div id="eventsBox"></div>
+    <a class="link" href="calendar.html">View full calendar →</a>
+  </div>
+  <div class="card">
+    <div class="card-title">Upcoming Deadlines <i data-lucide="trending-up"></i></div>
+    <div id="dashboardDeadlines"></div>
+    <a class="link" href="academics.html">View all assignments →</a>
+  </div>
+</div>
+<div class="grid two">
+  <div class="card"><h3>GPA Summary</h3><div id="dashboardGpaValue" class="big">0.00</div><p id="dashboardGpaText" class="subtitle">Cumulative GPA</p><p id="dashboardSpaText" class="subtitle">SPA: 0.00</p><div class="line-chart"></div><a class="link" href="gpa-tracker.html">View full tracker →</a></div>
+ <div class="card">
+  <h3>Budget Snapshot</h3>
+
+  <div id="dashboardSpentValue" class="big">0 ₸</div>
+  <p id="dashboardBudgetText" class="subtitle">of 0 ₸ spent this month</p>
+
+  <div class="progress">
+    <span id="dashboardBudgetProgress" style="width:0%"></span>
+  </div>
+
+  <div id="financeBox"></div>
+
+  <a class="link" href="finance.html">
+    View budget tracker →
+  </a>
+</div>
+</div>
+<div class="card mood-card">
+  <h3>How are you feeling?</h3>
+  <div class="moods">
+    <button class="mood-choice" data-mood="Very Bad">😔</button><button class="mood-choice" data-mood="Bad">😐</button><button class="mood-choice" data-mood="Okay">🙂</button><button class="mood-choice" data-mood="Good">😊</button><button class="mood-choice" data-mood="Amazing">🤩</button>
+  </div>
+  <p class="subtitle">Track your daily mood and mental wellbeing</p>
+  <a class="link" href="wellbeing.html">View wellbeing insights →</a>
+</div>
+</section>
+  </main>
+  <script src="scripts.js?v=20260502-dashboard-events-db-only"></script>
+</body>
+</html>

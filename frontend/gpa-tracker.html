@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPA Tracker</title>
+  <link rel="stylesheet" href="styles.css?v=20260502-gpa-db" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <h1 class="logo">Ulife</h1>
+    <nav>
+      <a class="nav-btn" href="dashboard.html"><i data-lucide="layout-dashboard"></i>Dashboard</a>
+      <a class="nav-btn" href="calendar.html"><i data-lucide="calendar"></i>Calendar</a>
+      <a class="nav-btn active" href="academics.html"><i data-lucide="graduation-cap"></i>Academics</a>
+      <a class="nav-btn" href="finance.html"><i data-lucide="wallet"></i>Finance</a>
+      <a class="nav-btn" href="wellbeing.html"><i data-lucide="heart"></i>Wellbeing</a>
+      <a class="nav-btn" href="notifications.html"><i data-lucide="bell"></i>Notifications</a>
+      <a class="nav-btn" href="settings.html"><i data-lucide="settings"></i>Settings</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div></div>
+      <div class="top-icons">
+        <a class="bell" href="notifications.html"><i data-lucide="bell"></i><b></b></a>
+        <a class="avatar" href="settings.html"><i data-lucide="user"></i></a>
+      </div>
+    </header>
+
+    <section class="page">
+      <h2>GPA Tracker</h2>
+      <p class="subtitle">Monitor your academic performance over time</p>
+
+      <div class="grid three">
+        <div class="card gpa-blue-card">
+          <p>Current SPA</p>
+          <div id="currentSpaValue" class="big">0.00</div>
+          <p id="currentSemesterLabel">Spring 2026</p>
+        </div>
+        <div class="card">
+          <p>Cumulative GPA</p>
+          <div id="cumulativeGpaValue" class="big">0.00</div>
+          <p class="green-text">Calculated with previous credits</p>
+        </div>
+        <div class="card">
+          <p>Total Credits</p>
+          <div id="totalCreditsValue" class="big">0</div>
+          <p id="currentCreditsText" class="subtitle">0 credits in progress</p>
+        </div>
+      </div>
+
+      <div class="card gpa-controls">
+        <label>Semester
+          <input id="gpaSemesterInput" value="Spring 2026">
+        </label>
+        <label>Previous Credits
+          <input id="previousCreditsInput" type="number" min="0" step="1" value="56">
+        </label>
+        <label>Previous GPA
+          <input id="previousGpaInput" type="number" min="0" max="4" step="0.01" value="3.81">
+        </label>
+        <button id="addGpaCourseBtn" type="button">Add Course</button>
+      </div>
+
+      <div class="card">
+        <h3>GPA Trend</h3>
+        <div class="gpa-chart"></div>
+        <div class="chart-labels">
+          <span>Fall 2023</span><span>Spring 2024</span><span>Fall 2024</span><span>Spring 2025</span><span>Fall 2025</span><span>Spring 2026</span>
+        </div>
+        <div class="legend"><span class="dot blue-dot"></span>Semester GPA <span class="dot purple-dot"></span>Cumulative GPA</div>
+      </div>
+
+      <div class="card table-card">
+        <h3>Current Semester Courses</h3>
+        <table>
+          <thead>
+            <tr><th>Course Code</th><th>Course Name</th><th>Credits</th><th>Grade</th><th>Grade Points</th></tr>
+          </thead>
+          <tbody id="gpaCourseRows">
+          </tbody>
+          <tfoot>
+            <tr><td>Semester Total</td><td></td><td id="semesterCreditsTotal">0</td><td>SPA</td><td id="semesterSpaTotal">0.00</td></tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="scripts.js?v=20260502-gpa-db"></script>
+</body>
+</html>

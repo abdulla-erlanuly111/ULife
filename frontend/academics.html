@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ulife - Study Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <h1 class="logo">Ulife</h1>
+    <nav><a class="nav-btn " href="dashboard.html"><i data-lucide="layout-dashboard"></i>Dashboard</a>
+<a class="nav-btn " href="calendar.html"><i data-lucide="calendar"></i>Calendar</a>
+<a class="nav-btn active" href="academics.html"><i data-lucide="graduation-cap"></i>Academics</a>
+<a class="nav-btn " href="finance.html"><i data-lucide="wallet"></i>Finance</a>
+<a class="nav-btn " href="wellbeing.html"><i data-lucide="heart"></i>Wellbeing</a>
+<a class="nav-btn " href="notifications.html"><i data-lucide="bell"></i>Notifications</a>
+<a class="nav-btn " href="settings.html"><i data-lucide="settings"></i>Settings</a></nav>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div></div>
+      <div class="top-icons">
+        <a class="bell" href="notifications.html"><i data-lucide="bell"></i><b></b></a>
+        <a class="avatar" href="settings.html"><i data-lucide="user"></i></a>
+      </div>
+    </header>
+    <section class="page">
+<div class="page-head">
+  <div>
+    <h2>Study Planner</h2>
+    <p class="subtitle">Plan assignments, track progress, and move work through each stage.</p>
+  </div>
+  <button id="openTaskModal">+ Add Task</button>
+</div>
+
+<div class="grid four study-kpis">
+  <div class="card"><p>Active Tasks</p><b id="plannerActiveTasks">0</b></div>
+  <div class="card"><p>Due This Week</p><b id="plannerDueThisWeek">0</b></div>
+  <div class="card"><p>Overdue</p><b id="plannerOverdue">0</b></div>
+  <div class="card"><p>Completion Rate</p><b id="plannerCompletionRate">0%</b></div>
+</div>
+
+<div class="study-board" id="studyPlannerBoard">
+  <section class="study-column">
+    <div class="study-column-head"><h3>To Do</h3><span data-study-count="To Do">0</span></div>
+    <div class="study-column-body" data-study-column="To Do"></div>
+  </section>
+  <section class="study-column">
+    <div class="study-column-head"><h3>In Progress</h3><span data-study-count="In Progress">0</span></div>
+    <div class="study-column-body" data-study-column="In Progress"></div>
+  </section>
+  <section class="study-column">
+    <div class="study-column-head"><h3>Submitted</h3><span data-study-count="Submitted">0</span></div>
+    <div class="study-column-body" data-study-column="Submitted"></div>
+  </section>
+  <section class="study-column">
+    <div class="study-column-head"><h3>Completed</h3><span data-study-count="Completed">0</span></div>
+    <div class="study-column-body" data-study-column="Completed"></div>
+  </section>
+</div>
+</section>
+  </main>
+  <div class="modal" id="taskModal">
+    <div class="modal-box study-modal">
+      <div class="modal-head">
+        <h3 id="taskModalTitle">Add Task</h3>
+        <button class="secondary icon-btn" id="closeTaskModal" type="button" aria-label="Close"><i data-lucide="x"></i></button>
+      </div>
+      <form id="taskForm" class="task-form">
+        <input type="hidden" id="taskId" />
+        <label>Title <input id="taskTitle" required placeholder="Research paper draft" /></label>
+        <label>Course Name <input id="taskCourseName" placeholder="Computer Science" /></label>
+        <label>Task Type
+          <select id="taskType">
+            <option value="Assignment">Assignment</option>
+            <option value="Quiz">Quiz</option>
+            <option value="Exam">Exam</option>
+            <option value="Project">Project</option>
+            <option value="Reading">Reading</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+        <label>Deadline <input id="taskDeadline" type="datetime-local" /></label>
+        <label>Priority
+          <select id="taskPriority">
+            <option>Low</option>
+            <option selected>Medium</option>
+            <option>High</option>
+          </select>
+        </label>
+        <label>Status
+          <select id="taskStatus">
+            <option>To Do</option>
+            <option>In Progress</option>
+            <option>Submitted</option>
+            <option>Completed</option>
+          </select>
+        </label>
+        <label>Progress <input id="taskProgress" type="number" min="0" max="100" value="0" /></label>
+        <label class="wide">Notes <textarea id="taskNotes" rows="4" placeholder="Key requirements, links, or reminders"></textarea></label>
+        <div class="task-form-actions">
+          <button class="secondary" id="cancelTaskModal" type="button">Cancel</button>
+          <button type="submit">Save Task</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>

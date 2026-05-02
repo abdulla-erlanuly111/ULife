@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ulife</title>
+  <link rel="stylesheet" href="styles.css?v=20260502-mood-chart" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <h1 class="logo">Ulife</h1>
+    <nav><a class="nav-btn " href="dashboard.html"><i data-lucide="layout-dashboard"></i>Dashboard</a>
+<a class="nav-btn " href="calendar.html"><i data-lucide="calendar"></i>Calendar</a>
+<a class="nav-btn " href="academics.html"><i data-lucide="graduation-cap"></i>Academics</a>
+<a class="nav-btn " href="finance.html"><i data-lucide="wallet"></i>Finance</a>
+<a class="nav-btn active" href="wellbeing.html"><i data-lucide="heart"></i>Wellbeing</a>
+<a class="nav-btn " href="notifications.html"><i data-lucide="bell"></i>Notifications</a>
+<a class="nav-btn " href="settings.html"><i data-lucide="settings"></i>Settings</a></nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div></div>
+      <div class="top-icons">
+        <a class="bell" href="notifications.html"><i data-lucide="bell"></i><b></b></a>
+        <a class="avatar" href="settings.html"><i data-lucide="user"></i></a>
+      </div>
+    </header>
+
+    <section class="page">
+      <h2>Wellbeing</h2>
+      <p class="subtitle">Track your mental health and get personalized tips</p>
+
+      <div class="grid three">
+        <div class="card pink-panel">
+          <h3>♡ Today's Mood</h3>
+          <div id="todayMoodEmoji" class="emoji">🙂</div>
+          <p id="todayMoodLabel">No mood yet</p>
+        </div>
+
+        <div class="card">
+          <p>7-Day Average</p>
+          <div id="averageMoodEmoji" class="emoji">🙂</div>
+          <b id="averageMoodValue">0.0 / 5.0</b>
+        </div>
+
+        <div class="card">
+          <p>Streak</p>
+          <div id="moodStreakValue" class="big">0 days</div>
+          <p id="moodStreakText" class="green-text">Start today</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>How are you feeling today?</h3>
+
+        <div class="mood-labels">
+          <div class="mood-choice" data-mood="Very Bad">😔<b>Very Bad</b></div>
+          <div class="mood-choice" data-mood="Bad">😐<b>Bad</b></div>
+          <div class="mood-choice" data-mood="Okay">🙂<b>Okay</b></div>
+          <div class="mood-choice" data-mood="Good">😊<b>Good</b></div>
+          <div class="mood-choice" data-mood="Amazing">🤩<b>Amazing</b></div>
+        </div>
+        <p id="moodSaveStatus" class="subtitle"></p>
+
+        <h3>Mood History</h3>
+        <div id="moodBox" class="mood-history"></div>
+      </div>
+
+      <div class="card tips">
+        <h3>💡 Wellbeing Tips</h3>
+
+        <div>
+          <article>⏰<b>Take Regular Breaks</b><p>Short breaks every 25-30 minutes improve focus and reduce stress.</p></article>
+          <article>💧<b>Stay Hydrated</b><p>Drinking enough water helps maintain energy levels.</p></article>
+          <article>👥<b>Talk with Friends</b><p>Social contact can improve your mood.</p></article>
+          <article>🏃<b>Move Your Body</b><p>A short walk can help reduce stress.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts.js?v=20260502-mood-chart"></script>
+</body>
+</html>
